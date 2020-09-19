@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc>
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="IntelliSync_BVT"
+      id="458b3057-6b09-4200-894d-e6513082fb42"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="IntelliSync_BVT"
+      id="458b3057-6b09-4200-894d-e6513082fb42"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

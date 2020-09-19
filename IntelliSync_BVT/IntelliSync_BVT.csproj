@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{254FE403-49E4-4DC0-9C59-FAFBE92BE358}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IntelliSync_BVT</RootNamespace>
+    <AssemblyName>IntelliSync_BVT</AssemblyName>
+    <NoWarn>1591</NoWarn>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <RANOREX_BIN_PATH Condition=" '$(RANOREX_BIN_PATH)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Ranorex\Studio', 'InstallDir', null, RegistryView.Registry64, RegistryView.Registry32))\Bin</RANOREX_BIN_PATH>
+    <RanorexTargetsPath>$(RANOREX_BIN_PATH)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>bcf66af2-5d3b-45be-87bf-004810a956ce</projectdefaultrepository>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountSetting11.cs">
+      <BoundTo>8d1d70a4-2051-4229-a081-a5cac238f151</BoundTo>
+      <DependentUpon>AccountSetting11.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>96437dd4-c489-4c75-b073-10928b09b701</id>
+    </Compile>
+    <Compile Include="AccountSetting11.UserCode.cs">
+      <BoundTo>8d1d70a4-2051-4229-a081-a5cac238f151</BoundTo>
+      <DependentUpon>AccountSetting11.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>3fece4d6-684e-49b9-9a32-8250e12586ea</id>
+    </Compile>
+    <Compile Include="AirSensor.cs">
+      <BoundTo>72a207fc-3687-4869-a94e-bd143a64c2d7</BoundTo>
+      <DependentUpon>AirSensor.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>21bab62c-9516-489f-83d4-34951a008f39</id>
+    </Compile>
+    <Compile Include="AirSensor.UserCode.cs">
+      <BoundTo>72a207fc-3687-4869-a94e-bd143a64c2d7</BoundTo>
+      <DependentUpon>AirSensor.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>dff7b9f0-e60c-4b2f-93ca-887cc86b1ef0</id>
+    </Compile>
+    <Compile Include="AirSensorProductOveriew.cs">
+      <BoundTo>b6c9a99c-5a82-46cc-a9e5-c61273a3e1d6</BoundTo>
+      <DependentUpon>AirSensorProductOveriew.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>102b6262-9582-4268-afe0-e98384bcdccd</id>
+    </Compile>
+    <Compile Include="AirSensorProductOveriew.UserCode.cs">
+      <BoundTo>b6c9a99c-5a82-46cc-a9e5-c61273a3e1d6</BoundTo>
+      <DependentUpon>AirSensorProductOveriew.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>fcadc841-c646-41f5-b5d4-dc261f1ca891</id>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <id>fcc70cf0-141b-4e91-9ac0-754f54668fc7</id>
+    </Compile>
+    <Compile Include="ContactaPro.cs">
+      <BoundTo>5ada1ca4-c1cc-4a76-9633-da03a7a13da7</BoundTo>
+      <DependentUpon>ContactaPro.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>deab8a7c-75cf-453d-b157-a649e6834f10</id>
+    </Compile>
+    <Compile Include="ContactaPro.UserCode.cs">
+      <BoundTo>5ada1ca4-c1cc-4a76-9633-da03a7a13da7</BoundTo>
+      <DependentUpon>ContactaPro.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>51be01f4-0226-4ede-943c-541553264028</id>
+    </Compile>
+    <Compile Include="HistoryGraph.cs">
+      <BoundTo>18e4b0fd-81ce-4bdf-bdda-85eb7068a336</BoundTo>
+      <DependentUpon>HistoryGraph.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a8973e20-336c-4ad8-bd36-55f4b5b059fd</id>
+    </Compile>
+    <Compile Include="HistoryGraph.UserCode.cs">
+      <BoundTo>18e4b0fd-81ce-4bdf-bdda-85eb7068a336</BoundTo>
+      <DependentUpon>HistoryGraph.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>df2034a8-d800-484c-ac9f-5586e32203d2</id>
+    </Compile>
+    <Compile Include="Home_Dashboard.cs">
+      <BoundTo>7f15698a-79ec-4efe-98ee-e23035fc717a</BoundTo>
+      <DependentUpon>Home_Dashboard.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c98bd6dd-f264-4511-8289-0226c6729340</id>
+    </Compile>
+    <Compile Include="Home_Dashboard.UserCode.cs">
+      <BoundTo>7f15698a-79ec-4efe-98ee-e23035fc717a</BoundTo>
+      <DependentUpon>Home_Dashboard.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b394c6aa-d577-424d-9dea-2a1ed619b7d6</id>
+    </Compile>
+    <Compile Include="IntelliSyncDashboard1.cs">
+      <BoundTo>8651835b-3139-4b9f-a48a-8f9b0b8a3c19</BoundTo>
+      <DependentUpon>IntelliSyncDashboard1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>041b1d3d-6f9f-4b5e-9dfb-204af133907c</id>
+    </Compile>
+    <Compile Include="IntelliSyncDashboard1.UserCode.cs">
+      <BoundTo>8651835b-3139-4b9f-a48a-8f9b0b8a3c19</BoundTo>
+      <DependentUpon>IntelliSyncDashboard1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1b81ff36-7f59-4d20-b485-dc991603bcba</id>
+    </Compile>
+    <Compile Include="IntelliSyncNotification.cs">
+      <BoundTo>2e45f731-e9e4-4169-9c45-b389133eea4b</BoundTo>
+      <DependentUpon>IntelliSyncNotification.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c90a0e60-d218-4689-91ca-c36f840256da</id>
+    </Compile>
+    <Compile Include="IntelliSyncNotification.UserCode.cs">
+      <BoundTo>2e45f731-e9e4-4169-9c45-b389133eea4b</BoundTo>
+      <DependentUpon>IntelliSyncNotification.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>71c0d8da-b735-4cdf-a52e-ea804203136c</id>
+    </Compile>
+    <Compile Include="IntelliSyncSettingandProductOverview.cs">
+      <BoundTo>8a6cf545-167c-4ad3-b687-b0a972dc805f</BoundTo>
+      <DependentUpon>IntelliSyncSettingandProductOverview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>41a6e350-662e-4445-980c-ff731398943a</id>
+    </Compile>
+    <Compile Include="IntelliSyncSettingandProductOverview.UserCode.cs">
+      <BoundTo>8a6cf545-167c-4ad3-b687-b0a972dc805f</BoundTo>
+      <DependentUpon>IntelliSyncSettingandProductOverview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>d4f21a7d-6f4a-4160-aa25-5e3fd7e4e460</id>
+    </Compile>
+    <Compile Include="IntelliSync_BVTRepository.cs">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <DependentUpon>IntelliSync_BVTRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>4061d854-ee96-4f02-ab37-25e1bb9725ab</id>
+    </Compile>
+    <Compile Include="Loginn.cs">
+      <BoundTo>2732f5fc-b847-45fc-b58c-b5218e2ac632</BoundTo>
+      <DependentUpon>Loginn.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>926292d0-e865-4f10-80fe-ea46dd140590</id>
+    </Compile>
+    <Compile Include="Loginn.UserCode.cs">
+      <BoundTo>2732f5fc-b847-45fc-b58c-b5218e2ac632</BoundTo>
+      <DependentUpon>Loginn.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ae5e2c82-bf93-477f-b543-bd354c3ca0d0</id>
+    </Compile>
+    <Compile Include="Notification11.cs">
+      <BoundTo>4e749b79-a3c3-4f19-8346-2cbbd3668e9c</BoundTo>
+      <DependentUpon>Notification11.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>d3891c44-2a5e-49ad-b4b0-8269dcc3781b</id>
+    </Compile>
+    <Compile Include="Notification11.UserCode.cs">
+      <BoundTo>4e749b79-a3c3-4f19-8346-2cbbd3668e9c</BoundTo>
+      <DependentUpon>Notification11.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>97a02a29-e9ee-452f-a939-f7f132a39bde</id>
+    </Compile>
+    <Compile Include="PoolCreationAndRemovePool.cs">
+      <BoundTo>6c36ab94-66a9-4eb5-8dc0-8d4327ffd2d7</BoundTo>
+      <DependentUpon>PoolCreationAndRemovePool.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>000adeef-3147-4058-b559-1b235ce870e3</id>
+    </Compile>
+    <Compile Include="PoolCreationAndRemovePool.UserCode.cs">
+      <BoundTo>6c36ab94-66a9-4eb5-8dc0-8d4327ffd2d7</BoundTo>
+      <DependentUpon>PoolCreationAndRemovePool.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>08db2246-6960-4528-ab13-23d4043a1298</id>
+    </Compile>
+    <Compile Include="ProductSupport.cs">
+      <BoundTo>d6c2901c-916f-4534-a67b-cd3ad0b5a831</BoundTo>
+      <DependentUpon>ProductSupport.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>86db8d96-baa1-4147-b5c2-fb8421f77ad2</id>
+    </Compile>
+    <Compile Include="ProductSupport.UserCode.cs">
+      <BoundTo>d6c2901c-916f-4534-a67b-cd3ad0b5a831</BoundTo>
+      <DependentUpon>ProductSupport.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c3b6fd5b-0e05-47b6-a881-b1161a05fef6</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>9b5d115f-d5b4-4211-b0cf-53e1dcd7bdf7</id>
+    </Compile>
+    <Compile Include="Recording1.cs">
+      <BoundTo>9ba0f329-b3ec-4b35-bf4f-368cfb372f81</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>fff1fa50-939b-434a-82c5-c72f27dbe952</id>
+    </Compile>
+    <Compile Include="Recording1.UserCode.cs">
+      <BoundTo>9ba0f329-b3ec-4b35-bf4f-368cfb372f81</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>af5ad9b9-c63d-4ddf-8c3f-7faa9dcd1ca6</id>
+    </Compile>
+    <Compile Include="RemoveDevice.cs">
+      <BoundTo>3258f554-637b-4c5a-af5f-b8c00b5f213f</BoundTo>
+      <DependentUpon>RemoveDevice.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a73e5469-fcd3-40f8-941f-ea9eb7fdffdf</id>
+    </Compile>
+    <Compile Include="RemoveDevice.UserCode.cs">
+      <BoundTo>3258f554-637b-4c5a-af5f-b8c00b5f213f</BoundTo>
+      <DependentUpon>RemoveDevice.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e12e6b48-1f8c-474e-86fd-3faa7a37137c</id>
+    </Compile>
+    <Compile Include="RemoveSensor.cs">
+      <BoundTo>c426fe53-3034-4ac3-89b2-630c388951eb</BoundTo>
+      <DependentUpon>RemoveSensor.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>797f5f97-0519-49cd-a033-27021c86f5b0</id>
+    </Compile>
+    <Compile Include="RemoveSensor.UserCode.cs">
+      <BoundTo>c426fe53-3034-4ac3-89b2-630c388951eb</BoundTo>
+      <DependentUpon>RemoveSensor.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>699becfb-9ffa-4b82-9275-b049fd7f7022</id>
+    </Compile>
+    <Compile Include="SensorContactaPro.cs">
+      <BoundTo>64630949-01fb-4ce6-bad1-5a9630484793</BoundTo>
+      <DependentUpon>SensorContactaPro.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>097f44f5-67d6-4e2a-b98d-6f906b41d41b</id>
+    </Compile>
+    <Compile Include="SensorContactaPro.UserCode.cs">
+      <BoundTo>64630949-01fb-4ce6-bad1-5a9630484793</BoundTo>
+      <DependentUpon>SensorContactaPro.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>9119cd06-5e98-4ada-894d-819c33701354</id>
+    </Compile>
+    <Compile Include="SensorFreezeProtection.cs">
+      <BoundTo>cebee024-5ffe-47eb-8023-25ea2df60468</BoundTo>
+      <DependentUpon>SensorFreezeProtection.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>42bf47b1-9fbe-4d6c-bd32-1d01b0d298ee</id>
+    </Compile>
+    <Compile Include="SensorFreezeProtection.UserCode.cs">
+      <BoundTo>cebee024-5ffe-47eb-8023-25ea2df60468</BoundTo>
+      <DependentUpon>SensorFreezeProtection.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a2ca842a-b877-419b-afd5-92c03084bcea</id>
+    </Compile>
+    <Compile Include="SensorNotification.cs">
+      <BoundTo>fbba3b47-541c-4a78-aacd-16e18b91e06a</BoundTo>
+      <DependentUpon>SensorNotification.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>29c439c3-14df-4a98-a180-331f236e3b2c</id>
+    </Compile>
+    <Compile Include="SensorNotification.UserCode.cs">
+      <BoundTo>fbba3b47-541c-4a78-aacd-16e18b91e06a</BoundTo>
+      <DependentUpon>SensorNotification.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e98796e6-4ff7-49cd-933b-a10121225cde</id>
+    </Compile>
+    <Compile Include="SensorProductOverview.cs">
+      <BoundTo>062f890b-d9b7-4659-9100-a75a3f4dc0cc</BoundTo>
+      <DependentUpon>SensorProductOverview.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>40c9a37e-8d99-4b1f-84a2-54b9345997db</id>
+    </Compile>
+    <Compile Include="SensorProductOverview.UserCode.cs">
+      <BoundTo>062f890b-d9b7-4659-9100-a75a3f4dc0cc</BoundTo>
+      <DependentUpon>SensorProductOverview.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b455f2d9-8a18-4d74-97c3-5bc156a58088</id>
+    </Compile>
+    <Compile Include="Walkthroughh.cs">
+      <BoundTo>bc2d50a9-7d9c-4cd5-88f1-041ee3ed4e2b</BoundTo>
+      <DependentUpon>Walkthroughh.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>860310ee-3a9f-4581-9114-e708cb478127</id>
+    </Compile>
+    <Compile Include="Walkthroughh.UserCode.cs">
+      <BoundTo>bc2d50a9-7d9c-4cd5-88f1-041ee3ed4e2b</BoundTo>
+      <DependentUpon>Walkthroughh.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b7f947da-a0e2-455f-abe1-502705068a20</id>
+    </Compile>
+    <Compile Include="wifi.cs">
+      <BoundTo>9728fa59-14c7-4d6a-aeef-3143d30f04b9</BoundTo>
+      <DependentUpon>wifi.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b003df11-e510-4616-b064-ffb80eca3eca</id>
+    </Compile>
+    <Compile Include="wifi.UserCode.cs">
+      <BoundTo>9728fa59-14c7-4d6a-aeef-3143d30f04b9</BoundTo>
+      <DependentUpon>wifi.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>2991d837-ce5b-48f6-bb96-aa1dbe025882</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccountSetting11.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>8d1d70a4-2051-4229-a081-a5cac238f151</id>
+      <recordtableid>816bc778-6516-409a-9a65-ecdc511e68c7</recordtableid>
+    </None>
+    <None Include="AirSensor.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>72a207fc-3687-4869-a94e-bd143a64c2d7</id>
+      <recordtableid>136b506e-8d53-4e50-9299-d7c1c12a5bdc</recordtableid>
+    </None>
+    <None Include="AirSensorProductOveriew.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>b6c9a99c-5a82-46cc-a9e5-c61273a3e1d6</id>
+      <recordtableid>f90423c5-a8f7-4496-a0b6-ec77879067a7</recordtableid>
+    </None>
+    <None Include="app.config">
+      <id>11d475ce-6a91-46de-ac5e-cc90bbb19e38</id>
+    </None>
+    <None Include="ContactaPro.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>5ada1ca4-c1cc-4a76-9633-da03a7a13da7</id>
+      <recordtableid>98eaa496-3c3b-4bb6-8656-0b811f476b04</recordtableid>
+    </None>
+    <None Include="HistoryGraph.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>18e4b0fd-81ce-4bdf-bdda-85eb7068a336</id>
+      <recordtableid>fd3cced8-eb1a-4872-9407-07c35e0d4293</recordtableid>
+    </None>
+    <None Include="Home_Dashboard.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>7f15698a-79ec-4efe-98ee-e23035fc717a</id>
+      <recordtableid>7ea846cc-394b-4160-8011-bb2710e0d030</recordtableid>
+    </None>
+    <None Include="IntelliSyncDashboard1.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>8651835b-3139-4b9f-a48a-8f9b0b8a3c19</id>
+      <recordtableid>82d13699-9299-4b77-82be-6309a74d295c</recordtableid>
+    </None>
+    <None Include="IntelliSyncNotification.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>2e45f731-e9e4-4169-9c45-b389133eea4b</id>
+      <recordtableid>a5c8fbca-5284-40b0-9876-b63d72e2f32d</recordtableid>
+    </None>
+    <None Include="IntelliSyncSettingandProductOverview.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>8a6cf545-167c-4ad3-b687-b0a972dc805f</id>
+      <recordtableid>cbdd9131-f750-4538-9431-5a76c977f7fe</recordtableid>
+    </None>
+    <None Include="IntelliSync_BVTRepository.rximg">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <DependentUpon>IntelliSync_BVTRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>bbf99c21-55e1-4f5d-97f5-70dd7f9a18fe</id>
+    </None>
+    <None Include="IntelliSync_BVTRepository.rxrep">
+      <id>bcf66af2-5d3b-45be-87bf-004810a956ce</id>
+      <repoid>9d95e1db-5dea-46e1-8f1b-36560afb7d14</repoid>
+      <reporootid>944b8046-3ed6-4e32-97d8-4f3f9b835bcd</reporootid>
+    </None>
+    <None Include="Loginn.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>2732f5fc-b847-45fc-b58c-b5218e2ac632</id>
+      <recordtableid>e9da4b57-cf44-4e8e-9432-bd16a9d669fd</recordtableid>
+    </None>
+    <None Include="Notification11.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>4e749b79-a3c3-4f19-8346-2cbbd3668e9c</id>
+      <recordtableid>b2924d1d-d29c-4658-9080-254d711b15d7</recordtableid>
+    </None>
+    <None Include="PoolCreationAndRemovePool.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>6c36ab94-66a9-4eb5-8dc0-8d4327ffd2d7</id>
+      <recordtableid>e127880a-2389-4f22-b652-577c32529119</recordtableid>
+    </None>
+    <None Include="ProductSupport.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>d6c2901c-916f-4534-a67b-cd3ad0b5a831</id>
+      <recordtableid>c0889396-bece-4f64-bd5f-f68fe5f57dff</recordtableid>
+    </None>
+    <None Include="Recording1.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>9ba0f329-b3ec-4b35-bf4f-368cfb372f81</id>
+      <recordtableid>28554929-91e2-4cdf-8f0c-56295b530a4a</recordtableid>
+    </None>
+    <None Include="RemoveDevice.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>3258f554-637b-4c5a-af5f-b8c00b5f213f</id>
+      <recordtableid>683caca6-7688-4579-8f17-6e5bbbb0f800</recordtableid>
+    </None>
+    <None Include="RemoveSensor.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>c426fe53-3034-4ac3-89b2-630c388951eb</id>
+      <recordtableid>d0665883-a16c-4fa2-aefd-b68d9112b298</recordtableid>
+    </None>
+    <None Include="SensorContactaPro.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>64630949-01fb-4ce6-bad1-5a9630484793</id>
+      <recordtableid>f5feb16d-af76-44f2-8131-a3446e96e0ca</recordtableid>
+    </None>
+    <None Include="SensorFreezeProtection.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>cebee024-5ffe-47eb-8023-25ea2df60468</id>
+      <recordtableid>c2a7b1be-f1b9-4bb7-b934-d97445213b0a</recordtableid>
+    </None>
+    <None Include="SensorNotification.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>fbba3b47-541c-4a78-aacd-16e18b91e06a</id>
+      <recordtableid>5125e464-d6eb-4985-962e-72ad19b3ab11</recordtableid>
+    </None>
+    <None Include="SensorProductOverview.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>062f890b-d9b7-4659-9100-a75a3f4dc0cc</id>
+      <recordtableid>ece00ecc-13c8-490d-a339-0d991cf4dc82</recordtableid>
+    </None>
+    <None Include="Walkthroughh.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>bc2d50a9-7d9c-4cd5-88f1-041ee3ed4e2b</id>
+      <recordtableid>22ec7804-99d7-4f81-8118-16a10bdbdbc4</recordtableid>
+    </None>
+    <None Include="wifi.rxrec">
+      <BoundTo>bcf66af2-5d3b-45be-87bf-004810a956ce</BoundTo>
+      <id>9728fa59-14c7-4d6a-aeef-3143d30f04b9</id>
+      <recordtableid>7c14b661-2425-4e3f-9c58-824f175f36e6</recordtableid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IntelliSync_BVT.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>7d5700c7-1b40-4685-9f5c-8e781ffa9cde</id>
+    </Content>
+    <Content Include="IntelliSync_BVT.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>346b4998-d758-4054-b84c-2877089487f6</id>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>

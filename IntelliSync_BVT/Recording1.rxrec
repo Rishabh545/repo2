@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="28554929-91e2-4cdf-8f0c-56295b530a4a"
+mode="Global">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Recording1"
+	namespace="IntelliSync_BVT">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<runmobileapprecorditem
+		application="com.pentair.pentairhome"
+		devicename="shaliniâ€™s iPhone"
+		duration="3500ms"
+		enabled="True"
+		optional="False"
+		resetInitialState="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</runmobileapprecorditem>
+		<loggingrecorditem
+		category="User"
+		enabled="True"
+		message="The Pentair home mobile app has been launched successfully"
+		optional="False"
+		reportlevel="Success;110"
+		searchpropertyid="1b605883-ae75-4e87-bfd0-a4bd0de6bb01">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</loggingrecorditem>
+		<explicitdelayitem
+		duration="10000ms"
+		enabled="True"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</explicitdelayitem>
+	</recorditems>
+	<repository
+	id="9d95e1db-5dea-46e1-8f1b-36560afb7d14"
+	name="IntelliSync_BVTRepository"
+	relativepath="IntelliSync_BVTRepository.rxrep">
+		<codegen
+		classname="IntelliSync_BVTRepository"
+		namespace="IntelliSync_BVT">
+		</codegen>
+		<rootfolder
+		id="944b8046-3ed6-4e32-97d8-4f3f9b835bcd"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Recording1.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
